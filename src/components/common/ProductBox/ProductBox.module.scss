@@ -79,7 +79,12 @@
     align-items: center;
   }
 
-  &:hover .buttons {
-    opacity: 1;
+  &:hover {
+    .buttons {
+      opacity: 1;
+    }
+    .price a {
+      background-color: $primary;
+    }
   }
 }
