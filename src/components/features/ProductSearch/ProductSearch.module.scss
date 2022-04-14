@@ -24,15 +24,35 @@
       right: 10px;
       z-index: 0;
     }
+  }
+  ul {
+    list-style: none;
 
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
-      z-index: 1;
+    li {
+      font-size: 14px;
+      color: $text-color;
     }
+  }
+
+  .selectCategory {
+    position: relative;
+    display: block;
+    padding: 5px 30px 5px 35px;
+
+    li {
+      margin-top: 16px;
+    }
+
+    li:hover .selectCategory2 {
+      display: block;
+      z-index: 1;
+      background-color: white;
+    }
+  }
+
+  .selectCategory2 {
+    display: none;
+    position: absolute;
   }
 
   .searchField {
