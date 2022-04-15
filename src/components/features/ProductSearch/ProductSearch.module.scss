@@ -36,17 +36,17 @@
 
   .selectCategory {
     position: relative;
-    display: block;
+    margin-top: 16px;
+    font-size: 14px;
     padding: 5px 30px 5px 35px;
 
-    li {
-      margin-top: 16px;
-    }
-
     li:hover .selectCategory2 {
+      font-weight: normal;
+      background-color: $primary;
       display: block;
-      z-index: 1;
-      background-color: white;
+      white-space: nowrap;
+      min-height: 1.6em;
+      padding: 0px 2px 1px;
     }
   }
 
