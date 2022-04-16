@@ -20,6 +20,7 @@
 
 .small {
   @extend .main;
+  display: inline-block;
   font-size: 13px;
   line-height: 24px;
   padding: 5px 10px;
