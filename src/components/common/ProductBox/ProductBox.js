@@ -11,9 +11,18 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, oldPrice, promo, stars }) => (
+const ProductBox = ({
+  name,
+  price,
+  oldPrice,
+  promo,
+  stars,
+  isFavorite,
+  toCompare,
+  image,
+}) => (
   <div className={styles.root}>
-    <div className={styles.photo}>
+    <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -39,18 +48,16 @@ const ProductBox = ({ name, price, oldPrice, promo, stars }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button variant='outline' isFavorite={isFavorite}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button variant='outline' toCompare={toCompare}>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.price}>
         <div className={styles.oldPrice}>{oldPrice}</div>
-        <Button noHover variant='small'>
-          $ {price}
-        </Button>
+        <Button variant='small'>$ {price}</Button>
       </div>
     </div>
   </div>
@@ -63,6 +70,9 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  isFavorite: PropTypes.bool,
+  toCompare: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default ProductBox;
