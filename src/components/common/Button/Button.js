@@ -3,11 +3,21 @@ import PropTypes from 'prop-types';
 
 import styles from './Button.module.scss';
 
-const Button = ({ children, variant, noHover, className: propClassName, ...props }) => {
+const Button = ({
+  children,
+  variant,
+  noHover,
+  isFavorite,
+  toCompare,
+  className: propClassName,
+  ...props
+}) => {
   const classes = [];
 
   if (propClassName) classes.push(propClassName);
 
+  if (isFavorite) classes.push(styles.favorite);
+  if (toCompare) classes.push(styles.compare);
   if (variant) classes.push(styles[variant]);
   else classes.push('main');
 
@@ -30,6 +40,8 @@ Button.propTypes = {
   noHover: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.string,
+  isFavorite: PropTypes.bool,
+  toCompare: PropTypes.bool,
 };
 
 export default Button;
