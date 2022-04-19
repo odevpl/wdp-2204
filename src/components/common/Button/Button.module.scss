@@ -15,11 +15,13 @@
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
+    transition-duration: $duration;
   }
 }
 
 .small {
   @extend .main;
+  display: inline-block;
   font-size: 13px;
   line-height: 24px;
   padding: 5px 10px;
@@ -37,5 +39,11 @@
   &:not(.noHover):hover {
     background-color: #2a2a2a;
     color: #ffffff;
+    transition-duration: $duration;
   }
+}
+.favorite,
+.compare {
+  background-color: $primary;
+  color: #ffffff;
 }
