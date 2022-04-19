@@ -79,6 +79,14 @@
     align-items: center;
   }
 
+  .oldPrice {
+    display: inline-block;
+    font-weight: bold;
+    color: $primary;
+    font-size: 16px;
+    text-decoration: line-through;
+    margin-right: 10px;
+  }
   &:hover {
     .buttons {
       opacity: 1;
