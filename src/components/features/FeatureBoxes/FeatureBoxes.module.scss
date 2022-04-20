@@ -1,8 +1,20 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   a {
     text-decoration: none;
+  }
+  .featureBoxCol {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .root {
+    padding: 5rem 0;
+    .featureBoxCol {
+      margin-bottom: 0px;
+    }
   }
 }
