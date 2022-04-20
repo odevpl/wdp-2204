@@ -20,7 +20,11 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ fade: 'fadeOut' });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+      this.setState({ fade: 'fadeIn' });
+    }, 1000);
   }
 
   render() {
