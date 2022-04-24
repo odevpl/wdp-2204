@@ -50,12 +50,11 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Swipable 
+      <Swipable
         itemsCount={pagesCount}
-        activeItem={this.state.activePage}
+        activeItem={activePage}
         action={this.handlePageChange.bind(this)}
       >
-
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
