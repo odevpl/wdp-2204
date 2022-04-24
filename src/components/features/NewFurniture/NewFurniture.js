@@ -8,20 +8,30 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    fade: 'fadeIn',
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ fade: 'fadeOut' });
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+      this.setState({ fade: 'fadeIn' });
+    }, 1000);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ fade: 'fadeOut' });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+      this.setState({ fade: 'fadeIn' });
+    }, 1000);
   }
 
   render() {
+    
     let rowLength = 4;
     const { categories, products, appMode } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, fade } = this.state;
 
     switch (appMode) {
       case 'mobile':
@@ -84,14 +94,14 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className={'row ' + fade}>
             {categoryProducts
-              .slice(activePage * rowLength, (activePage + 1) * rowLength)
-              .map(item => (
-                <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+             .slice(activePage * rowLength, (activePage + 1) * rowLength)
+               .map(item => (
+              <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
+                <ProductBox {...item} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
