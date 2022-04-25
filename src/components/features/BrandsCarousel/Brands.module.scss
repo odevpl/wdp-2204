@@ -1,0 +1,33 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 30px auto 60px auto;
+  padding: 0;
+
+  border: {
+    style: solid;
+    color: $muted;
+    width: 2px;
+    left: none;
+    right: none;
+  }
+
+  .containerWrapper {
+    height: 93px;
+    margin: 22px 0;
+  }
+
+  a {
+    opacity: 1;
+    background-color: $nero;
+    width: 34px;
+    height: initial;
+    &:hover {
+      opacity: 1;
+      :first-child {
+        color: $primary;
+      }
+    }
+  }
+}
+
