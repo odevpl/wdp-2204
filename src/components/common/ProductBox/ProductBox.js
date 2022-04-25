@@ -13,8 +13,19 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 import { addProductToCompare } from '../../../redux/productsRedux';
 import { removeProductToCompare } from '../../../redux/productsRedux';
+import { toggleProductFavorite } from '../../../redux/productsRedux';
 
-const ProductBox = ({ name, price, promo, stars, id, toCompare }) => {
+const ProductBox = ({
+  name,
+  price,
+  oldPrice,
+  promo,
+  stars,
+  isFavorite,
+  toCompare,
+  image,
+  id,
+}) => {
   const dispatch = useDispatch();
   const handleClickToCompare = (e, useSelector) => {
     e.preventDefault();
@@ -24,10 +35,14 @@ const ProductBox = ({ name, price, promo, stars, id, toCompare }) => {
       dispatch(removeProductToCompare(id));
     }
   };
+  const handleClickFavorite = e => {
+    e.preventDefault();
+    dispatch(toggleProductFavorite(id));
+  };
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
+      <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -53,14 +68,23 @@ const ProductBox = ({ name, price, promo, stars, id, toCompare }) => {
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline'>
+          <Button
+            variant='outline'
+            isFavorite={isFavorite}
+            onClick={handleClickFavorite}
+          >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' onClick={handleClickToCompare}>
+          <Button
+            variant='outline'
+            toCompare={toCompare}
+            onClick={handleClickToCompare}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.price}>
+          <div className={styles.oldPrice}>{oldPrice}</div>
           <Button noHover variant='small'>
             $ {price}
           </Button>
@@ -74,9 +98,12 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  isFavorite: PropTypes.bool,
   toCompare: PropTypes.bool,
+  image: PropTypes.string,
   id: PropTypes.string,
 };
 

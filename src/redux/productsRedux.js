@@ -14,6 +14,7 @@ const createActionName = actionName => `app/products/${actionName}`;
 const ADD_PRODUCT_TO_COMPARE = createActionName('ADD_PRODUCT_FAVORITE');
 const REMOVE_PRODUCT_TO_COMPARE = createActionName('REMOVE_PRODUCT_FAVORITE');
 const CLEAR_TO_COMPARE = createActionName('CLEAR_TO_COMPARE');
+const TOGGLE_PRODUCT_FAVORITE = createActionName('TOGGLE_PRODUCT_FAVORITE');
 
 /* action creator */
 export const addProductToCompare = payload => ({
@@ -26,6 +27,10 @@ export const removeProductToCompare = payload => ({
 });
 export const clearToCompare = payload => ({
   type: CLEAR_TO_COMPARE,
+  payload,
+});
+export const toggleProductFavorite = payload => ({
+  type: TOGGLE_PRODUCT_FAVORITE,
   payload,
 });
 
@@ -50,6 +55,12 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product => {
         return { ...product, toCompare: false };
       });
+    case TOGGLE_PRODUCT_FAVORITE:
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, isFavorite: !product.isFavorite }
+          : product
+      );
     default:
       return statePart;
   }
