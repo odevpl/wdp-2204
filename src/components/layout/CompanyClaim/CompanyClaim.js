@@ -16,7 +16,7 @@ const CompanyClaim = () => (
             222
           </p>
         </div>
-        <div className='col text-center'>
+        <div className={`col text-center ${styles.logo}`}>
           <a href='#'>
             <img src='/images/logo.png' alt='Bazar' />
           </a>
@@ -26,7 +26,7 @@ const CompanyClaim = () => (
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>
-            <div className={styles.cartCounter}>0</div>
+            <div className={styles.cartCounter}>99999</div>
           </a>
         </div>
       </div>

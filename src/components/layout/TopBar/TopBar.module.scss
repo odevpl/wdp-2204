@@ -13,7 +13,7 @@
       line-height: 55px;
 
       a {
-        color: #ffffff;
+        color: $light;
         font-size: 13px;
 
         &:hover {
@@ -38,5 +38,16 @@
     .icon {
       margin-right: 5px;
     }
+  }
+}
+
+/* media */
+
+@media (max-width: 575.98px) {
+  .loginText, .registerText {
+    display: none;
+  }
+  .topMenu ul li {
+    margin-left: 1rem !important;
   }
 }

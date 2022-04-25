@@ -4,22 +4,24 @@
 // }
 
 .main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $btn-dark;
+  color: $light;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    color: $light !important;
     background-color: $primary;
     text-decoration: none;
+    transition-duration: $duration;
   }
 }
 
 .small {
   @extend .main;
+  display: inline-block;
   font-size: 13px;
   line-height: 24px;
   padding: 5px 10px;
@@ -29,13 +31,18 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $btn-dark;
+  color: $text-color;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $btn-dark;
+    color: $light;
   }
+}
+.favorite,
+.compare {
+  background-color: $primary;
+  color: #ffffff;
 }
