@@ -82,7 +82,7 @@ Stars.propTypes = {
   name: PropTypes.string,
   stars: PropTypes.number,
   myStars: PropTypes.number,
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default Stars;
