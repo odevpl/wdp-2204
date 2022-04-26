@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Swipable from '../../common/Swipable/Swipable';
 
 class NewFurniture extends React.Component {
   state = {
@@ -49,29 +50,35 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <div className={styles.root}>
-        <div className='container'>
-          <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
-                <h3>New furniture</h3>
-              </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+      <Swipable
+        itemsCount={pagesCount}
+        activeItem={activePage}
+        action={this.handlePageChange.bind(this)}
+      >
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.panelBar}>
+              <div className='row no-gutters align-items-end'>
+                <div className={'col-auto ' + styles.heading}>
+                  <h3>New furniture</h3>
+                </div>
+                <div className={'col ' + styles.menu}>
+                  <ul>
+                    {categories.map(item => (
+                      <li key={item.id}>
+                        <a
+                          className={item.id === activeCategory && styles.active}
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +90,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
-      </div>
+      </Swipable>
     );
   }
 }
