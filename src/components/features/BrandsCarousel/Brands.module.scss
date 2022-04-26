@@ -4,6 +4,16 @@
   margin: 30px auto 60px auto;
   padding: 0;
 
+  .imageBlock {
+    display: inline-block;
+    max-width: 93px;
+    padding: 0;
+    img {
+      max-width: 93px;
+      height: auto;
+    }
+  }
+
   border: {
     style: solid;
     color: $muted;
@@ -15,6 +25,7 @@
   .containerWrapper {
     height: 93px;
     margin: 22px 0;
+    align-items: center;
   }
 
   a {

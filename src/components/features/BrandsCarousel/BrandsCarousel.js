@@ -2,36 +2,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styles from './Brands.module.scss';
+import { useSelector } from 'react-redux';
+import { getAllBrands } from '../../../redux/brandsRedux';
 
-const BrandsCarousel = props => {
+const BrandsCarousel = () => {
+  const brands = useSelector(getAllBrands);
+
   return (
     <div className={`container ${styles.root}`}>
       <div
         id='BrandsCarousel'
-        className={`carousel slide w-100 ${styles.containerWrapper}`}
+        className={`carousel slide w-100 row ${styles.containerWrapper}`}
         data-ride='carousel'
       >
-        <div className='carousel-inner slides6' data-visible='3'>
-          <div className='carousel-item active'>
-            <img
-              className='d-block'
-              src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1561819026/brands_1.jpg'
-              alt='First slide'
-            />
-          </div>
-          <div className='carousel-item active'>
-            <img
-              className='d-block'
-              src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1561819026/brands_1.jpg'
-              alt='Second slide'
-            />
-          </div>
-          <div className='carousel-item active'>
-            <img
-              className='d-block'
-              src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1561819026/brands_1.jpg'
-              alt='Third slide'
-            />
+        <div className='carousel-inner'>
+          <div className='carousel-item active d-flex px-5 justify-content-around'>
+            {brands.map(brand => (
+              <div key={brand.id} className={`col-lg-2 ${styles.imageBlock}`}>
+                <img src={brand.image} alt={brand.name} />
+              </div>
+            ))}
           </div>
         </div>
         <a
