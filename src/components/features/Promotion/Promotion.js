@@ -11,6 +11,8 @@ import {
   faStar,
   faExchangeAlt,
   faShoppingBasket,
+  faAngleLeft,
+  faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 
@@ -107,8 +109,12 @@ const Promotion = ({ isFavorite, toCompare }) => {
                 </Button>
               </div>
               <div className={styles.button_right_left}>
-                <button className='col-6'>❮</button>
-                <button className='col-6'>❯</button>
+                <button className='col-6'>
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </button>
+                <button className='col-6'>
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </button>
               </div>
             </div>
           </div>
