@@ -1,0 +1,138 @@
+@import "../../../styles/settings.scss";
+
+.root {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: $text-color;
+
+    .promotionLeft {
+        height: 420px;
+        color: $light;
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+        }
+        position: relative;
+        display: flex;
+    }
+    
+    .promotionLeft::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 90%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        background-color: $text-color;
+        opacity: 0.7;
+    }
+
+    .promotionLeftContent {
+        z-index: 1;
+        position: absolute;
+        margin-left: 50px;
+        top: 80%;
+        transform: translate(0, -80%);
+        
+        
+        .subtitle {
+            font-size: 36px;
+            margin-bottom: -10px;
+            font-weight: 600;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 800;
+        }
+        
+        .price {
+            width: 70%;
+            text-align: center;
+            font-size: 50px;
+            border: solid 2px;
+        }
+    } 
+
+    .promotionUp, .promotionDown {
+        height: 195px;
+    }
+
+    .promotionUp {  
+        margin-bottom: 30px;
+        position: relative;
+        background-color: $promotion-up-bg;
+        position: relative;
+       
+        
+        .photo {
+            height: 195px;
+            content: '';
+            background: {
+                size: cover;
+                repeat: no-repeat;
+                position: center;
+            }
+        }
+
+        .promotionUpContent {
+            position: absolute;
+            top: 50%;
+            transform: translate(15%, -50%);
+
+            .title {
+                margin-top: 20px;
+                font-size: 30px;
+                margin-bottom: -5px;
+            }
+            .subtitle {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .price {
+                color: $primary;
+                font-size: 36px;
+                margin-top: -20px;
+                font-weight: 600;
+            }
+        }
+    }
+    .promotionDown {  
+        position: relative;
+        background-color: $promotion-down-bg;
+        position: relative;
+        
+        .photo {
+            height: 195px;
+            content: '';
+            background: {
+                size: cover;
+                repeat: no-repeat;
+                position: center;
+            }
+        }
+
+        .promotionDownContent {
+            position: absolute;
+            top: 50%;
+            transform: translate(10%, -50%);
+            text-align: right;
+
+            .title {
+                color: $primary;
+                font-size: 25px;
+                margin-bottom: -5px;
+            }
+
+            .price {
+                font-size: 18px;
+             
+                span {
+                    font-size: 24px;
+                }  
+            }
+        }
+    }
+}
