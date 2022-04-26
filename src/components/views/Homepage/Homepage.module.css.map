@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,mDAAmD",
+    "sources": [
+        "Homepage.module.scss",
+        "../../../styles/settings.scss"
+    ],
+    "names": [],
+    "file": "Homepage.module.css"
+}
