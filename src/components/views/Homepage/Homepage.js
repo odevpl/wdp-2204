@@ -5,10 +5,13 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import Promotions from '../../features/Promotions/Promotions';
 
 const Homepage = ({ appMode }) => (
   <div className={styles.root}>
     <FeatureBoxes />
+    <Promotions />
+    <NewFurniture />
     <NewFurniture appMode={appMode} />
   </div>
 );
