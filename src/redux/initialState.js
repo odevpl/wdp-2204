@@ -455,6 +455,37 @@ const initialState = {
       image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497_960_720.jpg',
     },
   ],
+  promotions: [
+    {
+      id: 'sofa',
+      title: 'sofa',
+      subtitle: 'guest room',
+      image:
+        'https://images.pexels.com/photos/6934175/pexels-photo-6934175.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+      promoPrice: '-20%',
+    },
+    {
+      id: 'chair',
+      boldTitle: 'office',
+      title: 'chair',
+      subtitle: 'collection',
+      imageOne:
+        'https://images.pexels.com/photos/3771691/pexels-photo-3771691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      imageTwo:
+        'https://images.pexels.com/photos/4067759/pexels-photo-4067759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      promoPrice: '$200.00',
+    },
+    {
+      id: 'bed',
+      boldTitle: 'special',
+      title: 'collection',
+      subtitleOne: 'save up',
+      subtitleTwo: 'of furniture',
+      image:
+        'https://images.pexels.com/photos/1457845/pexels-photo-1457845.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+      promoPrice: '45%',
+    },
+  ],
 
   cart: {
     products: [],
