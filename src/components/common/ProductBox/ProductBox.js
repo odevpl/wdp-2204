@@ -14,9 +14,11 @@ const ProductBox = ({
   oldPrice,
   promo,
   stars,
+  myStars,
   isFavorite,
   toCompare,
   image,
+  id,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
@@ -28,7 +30,7 @@ const ProductBox = ({
         </Button>
       </div>
     </div>
-    <Stars name={name} stars={stars}></Stars>
+    <Stars name={name} stars={stars} myStars={myStars} id={id}></Stars>
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
@@ -54,9 +56,11 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  myStars: PropTypes.number,
   isFavorite: PropTypes.bool,
   toCompare: PropTypes.bool,
   image: PropTypes.string,
+  id: PropTypes.number,
 };
 
 export default ProductBox;
