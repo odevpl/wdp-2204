@@ -1,25 +1,14 @@
 @import "../../../styles/settings.scss";
-.content {
-  text-align: center;
-  padding: 20px;
 
-  h5 {
-    color: $primary;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 1px;
-  }
-
-  .stars {
-    a {
-      text-decoration: none;
-      color: $text-color;
-      &:hover {
-        color: $primary;
-      }
-    }
-    .select {
+.stars {
+  a {
+    text-decoration: none;
+    color: $text-color;
+    &:hover {
       color: $primary;
     }
+  }
+  .select {
+    color: $primary;
   }
 }

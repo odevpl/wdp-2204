@@ -39,7 +39,10 @@ const ProductBox = ({
           </Button>
         </div>
       </div>
-      <Stars name={name} stars={stars} myStars={myStars} id={id}></Stars>
+      <div className={styles.content}>
+        <h5>{name}</h5>
+        <Stars stars={stars} myStars={myStars} id={id}></Stars>
+      </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
