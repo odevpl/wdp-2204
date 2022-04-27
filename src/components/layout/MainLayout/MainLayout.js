@@ -36,7 +36,7 @@ const MainLayout = ({ children, setAppMode }) => {
 };
 
 MainLayout.propTypes = {
-  setAppMode: PropTypes.string,
+  setAppMode: PropTypes.func,
   children: PropTypes.node,
 };
 
