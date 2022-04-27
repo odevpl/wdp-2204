@@ -9,6 +9,12 @@ export const getToCompare = ({ products }) =>
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
+export const getIsTopSeller = ({ products }) =>
+  products.filter(item => item.isTopSeller === true);
+
+export const getActiveInGallery = ({ products }) =>
+  products.find(item => item.activeInGallery === true);
+
 /* actions */
 const createActionName = actionName => `app/products/${actionName}`;
 const ADD_PRODUCT_TO_COMPARE = createActionName('ADD_PRODUCT_FAVORITE');
