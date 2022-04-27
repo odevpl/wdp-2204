@@ -14,7 +14,6 @@ const Homepage = ({ appMode }) => (
     <Promotion />
     <FeatureBoxes />
     <Promotions />
-    <NewFurniture />
     <NewFurniture appMode={appMode} />
     <Feedback />
   </div>

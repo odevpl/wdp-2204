@@ -58,6 +58,7 @@ class NewFurniture extends React.Component {
       dots.push(
         <li key={'NewFurniture dot' + i}>
           <a
+            href='#test'
             onClick={() => this.handlePageChange(i)}
             className={i === activePage ? styles.active : ''}
           >
@@ -85,6 +86,7 @@ class NewFurniture extends React.Component {
                     {categories.map(item => (
                       <li key={item.id}>
                         <a
+                          href='#test'
                           className={item.id === activeCategory ? styles.active : ''}
                           onClick={() => this.handleCategoryChange(item.id)}
                         >
