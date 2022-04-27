@@ -490,6 +490,40 @@ const initialState = {
   cart: {
     products: [],
   },
+  
+  brands: [
+    {
+      id: '1',
+      name: 'brand1',
+      image: 'https://i.postimg.cc/QxPJ8hXy/brand-1.png',
+    },
+    {
+      id: '2',
+      name: 'brand2',
+      image: 'https://i.postimg.cc/pdMQjC5Q/brand-2.png',
+    },
+    {
+      id: '3',
+      name: 'brand3',
+      image: 'https://i.postimg.cc/B6qxYvgX/brand-3.png',
+    },
+    {
+      id: '4',
+      name: 'brand4',
+      image: 'https://i.postimg.cc/d14GzKHn/brand-4.png',
+    },
+    {
+      id: '5',
+      name: 'brand5',
+      image: 'https://i.postimg.cc/x8ZM13Sz/brand-5.png',
+    },
+    {
+      id: '6',
+      name: 'brand6',
+      image: 'https://i.postimg.cc/B6qxYvgX/brand-3.png',
+    },
+  ],
+  
   feedback: [
     {
       id: 1,

@@ -5,6 +5,7 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import BrandsCarousel from '../../features/BrandsCarousel/BrandsCarousel';
 import Feedback from '../../features/Feedback/Feedback';
 import Promotion from '../../features/Promotion/Promotion';
 import Promotions from '../../features/Promotions/Promotions';
@@ -16,6 +17,7 @@ const Homepage = ({ appMode }) => (
     <Promotions />
     <NewFurniture />
     <NewFurniture appMode={appMode} />
+    <BrandsCarousel />
     <Feedback />
   </div>
 );
