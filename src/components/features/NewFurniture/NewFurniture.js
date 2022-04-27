@@ -56,7 +56,7 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li key={'dot' + i}>
+        <li key={'NewFurniture dot' + i}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
