@@ -6,6 +6,7 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -426,6 +427,34 @@ const initialState = {
         'https://images.pexels.com/photos/7407771/pexels-photo-7407771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     },
   ],
+  promotion: [
+    {
+      id: 'armchair',
+      name: 'Anean Ru Britique',
+      category: 'Chair',
+      oldPrice: ' $ 350',
+      price: 300,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: true,
+      toCompare: true,
+      image:
+        'https://images.unsplash.com/photo-1567538096621-38d2284b23ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
+    },
+    {
+      id: 'armchair-2',
+      name: 'indoor',
+      name2: 'furniture',
+      category: 'Sofa',
+      description: 'save up to 50% off all furniture',
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: true,
+      toCompare: true,
+      image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497_960_720.jpg',
+    },
+  ],
   promotions: [
     {
       id: 'sofa',
@@ -461,6 +490,7 @@ const initialState = {
   cart: {
     products: [],
   },
+  
   brands: [
     {
       id: '1',
@@ -491,6 +521,36 @@ const initialState = {
       id: '6',
       name: 'brand6',
       image: 'https://i.postimg.cc/B6qxYvgX/brand-3.png',
+    },
+  ],
+  
+  feedback: [
+    {
+      id: 1,
+      comment:
+        'Great products at a good price. The next day delivery was safely packaged. Free unpacking of the furniture is an added plus.',
+      author: 'Adam Green',
+      authorType: 'Client',
+      photo:
+        'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600',
+    },
+    {
+      id: 2,
+      comment:
+        'Very good quality furniture, easy to assemble by yourself. There is no such choice anywhere else.',
+      author: 'Peter McBeal',
+      authorType: 'Client',
+      photo:
+        'https://images.unsplash.com/photo-1612979572692-f8a4cb3dce2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600',
+    },
+    {
+      id: 3,
+      comment:
+        'Working with this store is pure pleasure. I am glad that we can produce the best quality furniture that the customers of this store will enjoy.',
+      author: 'Ann Scott',
+      authorType: 'Supplier',
+      photo:
+        'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600',
     },
   ],
 };
