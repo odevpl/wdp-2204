@@ -17,11 +17,14 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      isFavorite: true,
+      image:
+        'https://images.pexels.com/photos/6758350/pexels-photo-6758350.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       toCompare: true,
+      isFavorite: true,
       image:
         'https://images.pexels.com/photos/6758350/pexels-photo-6758350.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     },
+
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
@@ -490,7 +493,7 @@ const initialState = {
   cart: {
     products: [],
   },
-  
+
   brands: [
     {
       id: '1',
@@ -523,7 +526,7 @@ const initialState = {
       image: 'https://i.postimg.cc/B6qxYvgX/brand-3.png',
     },
   ],
-  
+
   feedback: [
     {
       id: 1,
