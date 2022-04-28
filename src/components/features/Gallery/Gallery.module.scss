@@ -1,0 +1,281 @@
+@import "../../../styles/settings.scss";
+
+.roots {
+    margin-top: 60px;
+
+    .gallery {
+       
+        .heading {
+            margin-bottom: 20px;
+            position: relative;
+            border-bottom: 4px solid $muted;
+            padding: 0;
+        
+            h3 {
+                color: $primary;
+                text-transform: uppercase;
+                font-size: 20px;
+                line-height: 38px;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 45px;
+                border-bottom: 4px solid $primary;
+            }
+        }
+    }
+
+    .galleryBox {
+        border: $muted;
+        margin-bottom: 20px;
+    
+        .tabs {
+          text-align: center;
+        
+          ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+    
+            li {
+              list-style: none;
+              display: flex;
+              align-items: stretch;
+              margin: -1px;
+              width: 100%;
+              font-weight: 600;
+              border-bottom: $muted;
+              border-right: $muted;
+    
+              a {
+                color: $text-color;
+                text-transform: uppercase;
+                font-size: 16px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                border-top: 4px solid transparent;
+                letter-spacing: 1px;
+                width: 100%;
+                justify-content: center;
+                padding: auto;
+                line-height: 2.5;
+    
+                &:hover,
+                &.active {
+                  background-color: $muted;
+                  color: $primary;
+                  border-color: $primary;
+                }
+              }
+            }
+          }
+        }
+    }
+    .activeProduct {
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+        }
+        position: relative;
+        height: 350px;
+        
+        .icons {
+            position: absolute;
+            top: 50%;
+            transform: translate(30%, -50%);
+            
+        }
+        .icon {
+            font-size: 14px;
+            font-weight: 400;
+            color: $text-color;
+            padding: 8px;
+            border: 1px solid;
+
+            &:hover {
+                background-color: $primary;
+                color: $light;
+                border-color: $text-color;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+                 
+          
+  
+            .prices {
+                background-color: $text-color;
+                border-radius: 50%;
+                height: 96px;
+                width: 96px;
+                align-self: center;
+                color: $light;
+                opacity: 0.8;
+                margin-bottom: 7%;
+                padding-top: 5%;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                position: absolute;
+                transform: translate(150%, 170%);
+                z-index: 1;
+
+                .price {
+                    margin: 0;
+                    font-weight: 300;
+                }
+    
+                :first-child {
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+                :last-child {
+                    font-size: 14px;
+                    text-decoration: line-through;
+                }
+            }
+  
+            .contentBgn {
+                position: relative;
+                margin-right: 3px;
+                width: 45%;
+                height: 25%;
+                position: absolute;
+                right: 0;
+                bottom: 5%;
+
+                box-shadow: 0px 3px 6px 0px $muted;
+                background-image: linear-gradient(135deg, $form-border-color 9%, $white 0, $light 91%, $light 0, $form-border-color 9%);
+
+                .content {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(10%, -50%);
+                }   
+            }
+        }
+    }
+    .slider {
+        margin: 3px 3px 20px 3px;
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        
+  
+        button {
+          width: 5%;
+          background-color: $text-color;
+          color: $light;
+          text-align: center;
+          padding: 0;
+  
+          svg {
+            display: flex;
+            margin: auto;
+          }
+        }
+  
+        .slides {
+          display: flex;
+          padding: 0;
+  
+          .slide {
+            height: 60px;
+            width: 100%;
+            flex-direction: column;
+            margin-right: 5px;
+            border: $muted;
+            position: relative;
+            background: $secondary;
+  
+            &:hover {
+              opacity: 0.5;
+            }
+  
+            &:first-of-type {
+              margin-left: 5px;
+            }
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+    .staticItemGallery {
+        
+        margin-bottom: 20px;
+        min-height: 100%;
+        
+
+        .wrapper{
+            background-color: $static-gallery-bg;
+            height: 100%;
+            position: relative;
+        }
+        .content {
+            text-align: left;
+            font-weight: 600;
+            position: absolute;
+            top: 5%;
+            left: 8%;
+
+            p {
+                text-transform: uppercase;
+                font-size: 18px;
+
+                span {
+                    font-size: 48px;
+                    color: $static-gallery-color;
+                }
+            }
+            
+            h2 {
+                font-weight: 600;
+                font-size: 48px;
+                color: $primary;
+                margin-top: -15px;
+                margin-bottom: 30px;
+            }
+
+            .button {
+                font-size: 20px;
+                background-color: $static-gallery-color;
+            }
+        }
+        .image {
+            width: 400px;
+            height: 250px;
+            position: absolute;
+            content: '';
+            background: {
+                size: cover;
+                repeat: no-repeat;
+                position: center;
+            }
+            top: 48%;
+            left: 20%;
+        }
+    }
+
+    
+
+
+}   
+    
