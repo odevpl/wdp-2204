@@ -11,11 +11,12 @@ import Promotion from '../../features/Promotion/Promotion';
 import Promotions from '../../features/Promotions/Promotions';
 import BrandsCarousel from '../../features/BrandsCarousel/BrandsCarousel';
 import Feedback from '../../features/Feedback/Feedback';
+import Gallery from '../../features/Gallery/Gallery';
+
 const Homepage = ({ appMode }) => {
   const productsToCompare = useSelector(state => getToCompare(state));
   return (
     <div className={styles.root}>
-      git
       <Promotion />
       <FeatureBoxes />
       <Promotions />
@@ -25,6 +26,7 @@ const Homepage = ({ appMode }) => {
       ) : (
         <CompareBar state='closed' />
       )}
+      <Gallery />
       <BrandsCarousel />
       <Feedback />
     </div>
