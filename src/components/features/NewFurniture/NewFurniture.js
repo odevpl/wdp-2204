@@ -29,7 +29,6 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    
     let rowLength = 4;
     const { categories, products, appMode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
