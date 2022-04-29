@@ -21,6 +21,7 @@ const ADD_PRODUCT_TO_COMPARE = createActionName('ADD_PRODUCT_FAVORITE');
 const REMOVE_PRODUCT_TO_COMPARE = createActionName('REMOVE_PRODUCT_FAVORITE');
 const CLEAR_TO_COMPARE = createActionName('CLEAR_TO_COMPARE');
 const TOGGLE_PRODUCT_FAVORITE = createActionName('TOGGLE_PRODUCT_FAVORITE');
+const SHOW_POPUP = createActionName('SHOW_POPUP');
 
 /* action creator */
 export const addProductToCompare = payload => ({
