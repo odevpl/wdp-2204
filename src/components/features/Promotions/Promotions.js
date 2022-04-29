@@ -8,7 +8,6 @@ import { getAllPromotions } from '../../../redux/promotionsRedux';
 const Promotions = () => {
   const promotions = useSelector(getAllPromotions);
   const [leftPromotion, upPromotion, downPromotion] = [...promotions];
-  console.log('up', upPromotion);
 
   return (
     <div className={styles.root}>
