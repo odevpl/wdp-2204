@@ -6,6 +6,7 @@
   margin-bottom: 2rem;
 
   .photo {
+    display: block;
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
@@ -16,6 +17,10 @@
     }
     overflow: hidden;
     align-items: flex-end;
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
     .sale {
       position: absolute;

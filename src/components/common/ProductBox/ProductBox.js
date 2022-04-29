@@ -42,15 +42,21 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
+      <a
+        href={`/product/${id}`}
+        className={styles.photo}
+        style={{ backgroundImage: `url(${image})` }}
+      >
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
+          <Button variant='small'>
+            <a href={`/product/${id}`}>Quick View</a>
+          </Button>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
-      </div>
+      </a>
       <div className={styles.content}>
         <h5>{name}</h5>
         <div className={styles.stars}>
