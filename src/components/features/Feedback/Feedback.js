@@ -13,10 +13,11 @@ const Feedback = () => {
   const dots = [];
   for (let i = 0; i < feedbackCount; i++) {
     dots.push(
-      <li>
+      <li key={'Feedback dot' + i}>
         <a
-          onClick={() => console.log(i)}
-          className={i === activeFeedback && styles.active}
+          href='#test'
+          onClick={() => {}}
+          className={i === activeFeedback ? styles.active : ''}
         >
           page {i}
         </a>
