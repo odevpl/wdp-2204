@@ -29,7 +29,7 @@ const Button = ({
   }
 
   return (
-    <Comp href='#' {...props} className={classes.join(' ')}>
+    <Comp href='#test' {...props} className={classes.join(' ')}>
       {children}
     </Comp>
   );
