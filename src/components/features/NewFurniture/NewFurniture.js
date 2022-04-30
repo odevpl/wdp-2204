@@ -29,7 +29,6 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    
     let rowLength = 4;
     const { categories, products, appMode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
@@ -45,7 +44,7 @@ class NewFurniture extends React.Component {
         rowLength = 3;
         break;
       case 'desktop':
-        rowLength = 4;
+        rowLength = 8;
         break;
       default:
         break;
@@ -100,15 +99,16 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className={'row ' + fade}>
-            {categoryProducts
-              .slice(activePage * rowLength, (activePage + 1) * rowLength)
-              .map(item => (
-                <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+
+            <div className={'row ' + fade}>
+              {categoryProducts
+                .slice(activePage * rowLength, (activePage + 1) * rowLength)
+                .map(item => (
+                  <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </Swipable>

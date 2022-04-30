@@ -11,6 +11,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 import Login from './components/features/Login/Login';
+import Register from './components/views/Register/Register';
 
 const App = () => {
   const [appMode, setAppMode] = useState('');
@@ -23,6 +24,7 @@ const App = () => {
             <Route exact path={'/shop/:categoryId'} component={ProductList} />
             <Route exact path={'/product/:productId'} component={ProductPage} />
             <Route exact path={'/login'} component={Login} />
+            <Route exact path={'/register'} component={Register} />
           </Switch>
         </MainLayout>
       </BrowserRouter>
