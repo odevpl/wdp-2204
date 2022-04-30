@@ -5,12 +5,12 @@ const TelephoneInput = ({ id, label }) => {
   return (
     <div className='row mb-3'>
       <div className='col-12 col-sm-4'>
-        <label className='form-label' htlmFor='ftelephone'>
+        <label className='form-label' htmlFor='ftelephone'>
           Telefon
         </label>
       </div>
       <div className='col-5 col-sm-3'>
-        <select className='form-select form-control' id='ftelephone'>
+        <select className='form-select form-control' id='ftelephone-prefix'>
           <option value='1'>+48 (PL)</option>
         </select>
       </div>
