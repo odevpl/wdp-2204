@@ -49,16 +49,16 @@ const ProductBox = ({
       >
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
-          <Button variant='small'>
-            <a href={`/product/${id}`}>Quick View</a>
-          </Button>
+          <Button variant='small'>Quick View</Button>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
       </a>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <h5>
+          <a href={`/product/${id}`}>{name}</a>
+        </h5>
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map(i => (
             <a key={i} href='#'>
