@@ -19,7 +19,7 @@ const MainLayout = ({ children, setAppMode }) => {
     } else if (width >= 992) {
       setAppMode('desktop');
     }
-  });
+  }, [setAppMode]);
   handleResize();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const MainLayout = ({ children, setAppMode }) => {
 };
 
 MainLayout.propTypes = {
-  setAppMode: PropTypes.string,
+  setAppMode: PropTypes.func,
   children: PropTypes.node,
 };
 
