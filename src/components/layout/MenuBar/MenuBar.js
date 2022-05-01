@@ -29,27 +29,27 @@ const MenuBar = ({ children }) => {
           <div className={isNavExpanded ? 'col ' + styles.menu : styles.menuExpanded}>
             <ul>
               <li>
-                <a href='#test' className={styles.active}>
+                <a href='/' className={styles.active}>
                   Home
                 </a>
               </li>
               <li>
-                <a href='#test'>Furniture</a>
+                <a href='/shop/furniture'>Furniture</a>
               </li>
               <li>
-                <a href='#test'>Chair</a>
+                <a href='/shop/chair'>Chair</a>
               </li>
               <li>
-                <a href='#test'>Table</a>
+                <a href='/shop/table'>Table</a>
               </li>
               <li>
-                <a href='#test'>Sofa</a>
+                <a href='/shop/sofa'>Sofa</a>
               </li>
               <li>
-                <a href='#test'>Bedroom</a>
+                <a href='/shop/bedroom'>Bedroom</a>
               </li>
               <li>
-                <a href='#test'>Blog</a>
+                <a href='/blog'>Blog</a>
               </li>
             </ul>
           </div>
