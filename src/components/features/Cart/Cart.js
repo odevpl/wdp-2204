@@ -154,22 +154,22 @@ const Cart = () => (
         <div className='col text-center'>
           <ul>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faFacebook} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faTwitter} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faYoutube} />
               </a>
             </li>
