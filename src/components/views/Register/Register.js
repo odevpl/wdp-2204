@@ -4,6 +4,7 @@ import TelephoneInput from '../../common/TelephoneInput/TelephoneInput';
 import TextInput from '../../common/TextInput/TextInput';
 import ConsentInput from '../../common/ConsentInput/ConsentInput';
 import styles from './Register.module.scss';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -32,10 +33,12 @@ const Register = () => {
           <div className='row my-4'>
             <div className='col-12 col-md-4'></div>
             <div className='col-12 col-md-8 d-flex flex-column align-items-center'>
-              <Button className='mb-4' type='submit' variant='main'>
+              <Button className='mb-4' type='submit' variant='main' href='/'>
                 Załóż konto
               </Button>
-              <span>Masz juz konto? Zaloguj się</span>
+              <span>
+                Masz juz konto? <Link to={'/login'}>Zaloguj się</Link>{' '}
+              </span>
             </div>
           </div>
         </form>
