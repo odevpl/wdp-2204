@@ -1,1 +1,187 @@
 @import "../../../styles/settings.scss";
+
+.root {
+    margin-top: 30px;
+
+    .orderWrapper {
+        width: 800px;
+    }
+    
+    .welcomeTitle {
+        margin-bottom: 20px;
+
+        h1 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .orderNumber {
+        background-color: $muted;
+        padding-top: 20px; 
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+       
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        span {
+            color: $order-number;
+        }
+    }
+    
+    .statusWrapper {
+        margin-bottom: 20px;
+
+        span {
+            color: $order-status;
+        }
+    }
+
+    .itemsOrderTab {
+        border-top: 1px solid $muted;
+        border-bottom: 1px solid $muted;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .itemsOrderDetailsTab {
+        border-bottom: 1px solid $muted;
+        padding-top: 15px;
+        margin-bottom: 30px;
+        
+        .itemPhoto {
+            padding-bottom: 15px;
+            margin-top: -15px;
+            img {
+                width: 100%;
+                object-fit: cover;
+                vertical-align: top;
+            }
+        }
+
+        .itemName {
+            font-size: 18px;
+            padding-top: -5px;
+        }
+    }
+    
+    .priceDetails {
+        margin-bottom: 30px;
+        border-bottom: 1px solid $muted;
+    }
+
+    .buttons {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        .btn {
+            border-radius: 25px;
+            padding: 15px 10px;
+        }
+
+        .btn:first-child {
+            margin-right: 20px;
+            background-color: $primary;
+            color: $light;
+
+            &:hover {
+                background-color: $order-confirm-bt;
+            }
+
+            .link {
+                color: $light;
+            }
+        }
+    }
+
+    .socialMedia {
+        background-color: $muted;
+        margin-bottom: 30px;
+
+        ul {
+            list-style: none;
+            padding-top: 20px;
+            
+            li {
+                display: inline-block;
+                margin-right: 30px;
+
+                .icon {
+                    height: 30px;
+                    width: 30px;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    .companyDetails {
+        margin-bottom: 30px;
+
+        .logo {
+            img {
+                height: 60px;
+            }
+        }
+        .companyInf {
+            color: $secondary;
+            display: flex;
+            align-items: center;
+        
+            ul {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                
+                li {
+                    font-size: 14px;
+                }
+
+                li:first-child {
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+
+    .companyAddress{
+        text-align: right;
+        ul {
+            display: flex;
+            list-style-position: inside;
+            margin-left: -20px;
+           li {
+               
+               span {
+                   margin-left: -10px;
+               }
+           }
+
+           li:first-child{
+                flex: 2;
+                
+                margin-right: -20px;
+                list-style-type: none;
+            }
+
+           li:nth-child(3) {
+               flex: 2;
+               padding-left: 10px;
+               margin-left: -50px;
+               
+           }
+           li:nth-child(2) {
+            margin-right: -50px;
+            margin-left: 30px;
+            
+            }
+        
+        }
+    }
+
+}
+
