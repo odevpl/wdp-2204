@@ -8,6 +8,8 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Stars from '../Stars/Stars';
+import { addProductToCompare } from '../../../redux/productsRedux';
+import { removeProductToCompare } from '../../../redux/productsRedux';
 import { toggleProductFavorite } from '../../../redux/productsRedux';
 
 const ProductBox = ({
@@ -23,6 +25,14 @@ const ProductBox = ({
   id,
 }) => {
   const dispatch = useDispatch();
+  const handleClickToCompare = (e, useSelector) => {
+    e.preventDefault();
+    if (!toCompare) {
+      dispatch(addProductToCompare(id));
+    } else if (toCompare) {
+      dispatch(removeProductToCompare(id));
+    }
+  };
   const handleClickFavorite = e => {
     e.preventDefault();
     dispatch(toggleProductFavorite(id));
@@ -30,7 +40,11 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
+      <a
+        href={`/product/${id}`}
+        className={styles.photo}
+        style={{ backgroundImage: `url(${image})` }}
+      >
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -38,7 +52,7 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
-      </div>
+      </a>
       <div className={styles.content}>
         <h5>{name}</h5>
         <Stars stars={stars} myStars={myStars} id={id}></Stars>
@@ -53,7 +67,11 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' toCompare={toCompare}>
+          <Button
+            variant='outline'
+            toCompare={toCompare}
+            onClick={handleClickToCompare}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>

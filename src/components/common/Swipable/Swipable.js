@@ -3,21 +3,20 @@ import { Swipe } from 'react-swipe-component';
 import PropTypes from 'prop-types';
 
 const Swipable = ({ action, activeItem, itemsCount, children }) => {
-  
   const swipeLeft = () => {
-    if (activeItem < itemsCount ) {
+    if (activeItem < itemsCount) {
       action(activeItem + 1);
     }
   };
 
   const swipeRight = () => {
-    if (activeItem -1 >= 0){
+    if (activeItem - 1 >= 0) {
       action(activeItem - 1);
     }
   };
-  
+
   return (
-    <Swipe 
+    <Swipe
       nodeName='div'
       detectTouch='true'
       detectMouse='true'
@@ -27,7 +26,6 @@ const Swipable = ({ action, activeItem, itemsCount, children }) => {
       {children}
     </Swipe>
   );
-
 };
 
 Swipable.propTypes = {

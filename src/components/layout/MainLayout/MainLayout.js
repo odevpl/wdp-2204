@@ -1,10 +1,13 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-
+import { clearToCompare } from '../../../redux/productsRedux';
+import { useDispatch } from 'react-redux';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, setAppMode }) => {
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(clearToCompare()), [dispatch]);
   const handleResize = useCallback(() => {
     let width = window.innerWidth;
     if (width < 576) {
@@ -16,7 +19,7 @@ const MainLayout = ({ children, setAppMode }) => {
     } else if (width >= 992) {
       setAppMode('desktop');
     }
-  });
+  }, [setAppMode]);
   handleResize();
 
   useEffect(() => {
@@ -36,7 +39,7 @@ const MainLayout = ({ children, setAppMode }) => {
 };
 
 MainLayout.propTypes = {
-  setAppMode: PropTypes.string,
+  setAppMode: PropTypes.func,
   children: PropTypes.node,
 };
 
