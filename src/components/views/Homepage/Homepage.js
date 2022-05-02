@@ -12,6 +12,7 @@ import Promotions from '../../features/Promotions/Promotions';
 import BrandsCarousel from '../../features/BrandsCarousel/BrandsCarousel';
 import Feedback from '../../features/Feedback/Feedback';
 import Gallery from '../../features/Gallery/Gallery';
+import ChatBox from '../../features/ChatBox/ChatBox';
 
 const Homepage = ({ appMode }) => {
   const productsToCompare = useSelector(state => getToCompare(state));
@@ -29,6 +30,7 @@ const Homepage = ({ appMode }) => {
       <Gallery />
       <BrandsCarousel />
       <Feedback />
+      <ChatBox />
     </div>
   );
 };
