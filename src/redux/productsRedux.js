@@ -9,6 +9,8 @@ export const getToCompare = ({ products }) =>
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
+/* action creators */
+
 export const getIsTopSeller = ({ products }) =>
   products.filter(item => item.isTopSeller === true);
 
@@ -17,6 +19,7 @@ export const getActiveInGallery = ({ products }) =>
 
 /* actions */
 const createActionName = actionName => `app/products/${actionName}`;
+const CHANGE_AMOUNT_OF_STARS = createActionName('CHANGE_AMOUNT_OF_STARS');
 const ADD_PRODUCT_TO_COMPARE = createActionName('ADD_PRODUCT_FAVORITE');
 const REMOVE_PRODUCT_TO_COMPARE = createActionName('REMOVE_PRODUCT_FAVORITE');
 const CLEAR_TO_COMPARE = createActionName('CLEAR_TO_COMPARE');
@@ -24,6 +27,10 @@ const TOGGLE_PRODUCT_FAVORITE = createActionName('TOGGLE_PRODUCT_FAVORITE');
 const SHOW_POPUP = createActionName('SHOW_POPUP');
 
 /* action creator */
+export const changeAmountOfStars = payload => ({
+  type: CHANGE_AMOUNT_OF_STARS,
+  payload,
+});
 export const addProductToCompare = payload => ({
   type: ADD_PRODUCT_TO_COMPARE,
   payload,
@@ -68,6 +75,13 @@ export default function reducer(statePart = [], action = {}) {
           ? { ...product, isFavorite: !product.isFavorite }
           : product
       );
+    case CHANGE_AMOUNT_OF_STARS:
+      return statePart.map(product => {
+        if (product.id === action.payload.id) {
+          product.myStars = action.payload.amountOfStar;
+        }
+        return product;
+      });
     default:
       return statePart;
   }

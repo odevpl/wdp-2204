@@ -4,13 +4,10 @@ import { useDispatch } from 'react-redux';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Stars from '../Stars/Stars';
 import { addProductToCompare } from '../../../redux/productsRedux';
 import { removeProductToCompare } from '../../../redux/productsRedux';
 import { toggleProductFavorite } from '../../../redux/productsRedux';
@@ -24,6 +21,7 @@ const ProductBox = ({
   oldPrice,
   promo,
   stars,
+  myStars,
   isFavorite,
   toCompare,
   image,
@@ -94,20 +92,8 @@ const ProductBox = ({
         </div>
       </a>
       <div className={styles.content}>
-        <h5>
-          <a href={`/product/${id}`}>{name}</a>
-        </h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#test'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <h5>{name}</h5>
+        <Stars stars={stars} myStars={myStars} id={id}></Stars>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -145,6 +131,7 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  myStars: PropTypes.number,
   isFavorite: PropTypes.bool,
   toCompare: PropTypes.bool,
   image: PropTypes.string,
