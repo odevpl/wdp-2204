@@ -14,14 +14,13 @@ const CompareProduct = ({ product }) => {
 
   return (
     <div className={styles.Product}>
+      <img src={product.image} alt={product.name} className={styles.productPhoto} />
+      <div
+        className={styles.closeIcon}
+        onClick={() => handleClickRemove(product.id)}
+      ></div>
       <h6>{product.name}</h6>
-      <div className={styles.price}>
-        <p>Price: ${product.price}</p>
-      </div>
-      <img src={product.image} alt={product.name} />
-      <div className={styles.closeIcon} onClick={() => handleClickRemove(product.id)}>
-        <FontAwesomeIcon icon={faBan} className={styles.icon} />
-      </div>
+      <p className={styles.price}>Price: ${product.price}</p>
     </div>
   );
 };
