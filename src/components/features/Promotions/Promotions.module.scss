@@ -117,7 +117,7 @@
         .promotionDownContent {
             position: absolute;
             top: 50%;
-            transform: translate(10%, -50%);
+            transform: translate(0, -50%);
             text-align: right;
 
             .title {
@@ -134,5 +134,10 @@
                 }  
             }
         }
+    }
+}
+@media (max-width: 991px) {
+    .promotionUp {
+        margin-top: 30px;
     }
 }

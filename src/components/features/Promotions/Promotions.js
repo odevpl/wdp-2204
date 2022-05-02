@@ -13,7 +13,7 @@ const Promotions = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className='col-md-6 col-sm-12'>
+          <div className='col-lg-6 col-12'>
             <div
               className={styles.promotionLeft}
               style={{ backgroundImage: `url('${leftPromotion.image}')` }}
@@ -25,7 +25,7 @@ const Promotions = () => {
               </div>
             </div>
           </div>
-          <div className='col-md-6 col-sm-12'>
+          <div className='col-lg-6 col-12'>
             <div className='row'>
               <div className='col'>
                 <div className={styles.promotionUp}>
