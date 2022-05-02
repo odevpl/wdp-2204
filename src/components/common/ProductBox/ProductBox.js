@@ -15,6 +15,9 @@ import { addProductToCompare } from '../../../redux/productsRedux';
 import { removeProductToCompare } from '../../../redux/productsRedux';
 import { toggleProductFavorite } from '../../../redux/productsRedux';
 
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 const ProductBox = ({
   name,
   price,
@@ -25,6 +28,9 @@ const ProductBox = ({
   toCompare,
   image,
   id,
+  description,
+  size,
+  color,
 }) => {
   const dispatch = useDispatch();
   const handleClickToCompare = (e, useSelector) => {
@@ -49,7 +55,39 @@ const ProductBox = ({
       >
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
+          <Popup trigger={<Button variant='small'>Quick View</Button>} modal nested>
+            {close => (
+              <div className={styles.popup}>
+                <button className={styles.close} onClick={close}>
+                  &times;
+                </button>
+                <div className='container'>
+                  <div className='row'>
+                    <div className='col'>
+                      <div
+                        className={styles.image}
+                        style={{ backgroundImage: `url('${image}')` }}
+                      ></div>
+                    </div>
+                    <div className='col'>
+                      <div className={styles.content}>
+                        <h2 className={styles.title}> {name} </h2>
+                        <p className={styles.description}> {description} </p>
+                        <p className={styles.size}>
+                          {' '}
+                          <b>Size:</b> {size}{' '}
+                        </p>
+                        <p className={styles.color}>
+                          {' '}
+                          <b>Color:</b> <span> {color} </span>{' '}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </Popup>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
@@ -111,6 +149,9 @@ ProductBox.propTypes = {
   toCompare: PropTypes.bool,
   image: PropTypes.string,
   id: PropTypes.string,
+  description: PropTypes.string,
+  size: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default ProductBox;
