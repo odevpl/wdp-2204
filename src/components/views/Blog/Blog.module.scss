@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  .blog {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu {
+    a {
+      font-size: 12px;
+    }
+  }
+}

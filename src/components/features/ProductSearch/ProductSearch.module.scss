@@ -84,7 +84,9 @@
       }
     }
 
-    button {
+    a {
+      margin: auto 15px;
+      color: $text-color;
       border: 0;
       background-color: transparent;
       outline: none;
