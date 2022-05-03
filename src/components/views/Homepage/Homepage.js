@@ -12,6 +12,7 @@ import Promotions from '../../features/Promotions/Promotions';
 import BrandsCarousel from '../../features/BrandsCarousel/BrandsCarousel';
 import Feedback from '../../features/Feedback/Feedback';
 import Gallery from '../../features/Gallery/Gallery';
+import LatestBlog from '../../features/LatestBlog/LatestBlog';
 
 const Homepage = ({ appMode }) => {
   const productsToCompare = useSelector(state => getToCompare(state));
@@ -27,6 +28,7 @@ const Homepage = ({ appMode }) => {
         <CompareBar state='closed' />
       )}
       <Gallery />
+      <LatestBlog />
       <BrandsCarousel />
       <Feedback />
     </div>
