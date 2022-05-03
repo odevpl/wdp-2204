@@ -12,6 +12,7 @@ import Promotions from '../../features/Promotions/Promotions';
 import BrandsCarousel from '../../features/BrandsCarousel/BrandsCarousel';
 import Feedback from '../../features/Feedback/Feedback';
 import Gallery from '../../features/Gallery/Gallery';
+import ChatBox from '../../features/ChatBox/ChatBox';
 import LatestBlog from '../../features/LatestBlog/LatestBlog';
 
 const Homepage = ({ appMode }) => {
@@ -31,6 +32,7 @@ const Homepage = ({ appMode }) => {
       <LatestBlog />
       <BrandsCarousel />
       <Feedback />
+      <ChatBox />
     </div>
   );
 };

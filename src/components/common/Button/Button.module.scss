@@ -46,3 +46,63 @@
   background-color: $primary;
   color: #ffffff;
 }
+.chatTop {
+  background-color: $primary;
+  color: $darkGrey;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.chatSend {
+  @extend .small;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.openChatBox {
+  display: block;
+  font-size: 22px;
+  line-height: 24px;
+  height: 80px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 25px 10px;
+  font-weight: 600;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $primary;
+  box-shadow: 2px 2px 10px 2px silver;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+  overflow: hidden;
+  &:hover {
+    color: $primary;
+    background-color: $lightGrey;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+}
+
+.closeChatBox {
+  display: block;
+  font-size: 30px;
+  line-height: 24px;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  font-weight: 600;
+  color: $primary;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: 2px 2px 10px 2px silver;
+  transition: 0.5s;
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+}
